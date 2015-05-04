@@ -2,8 +2,7 @@ package main;
 
 import engine.Game;
 import javafx.scene.canvas.*;
-
-import java.awt.Color;
+import javafx.scene.paint.Color;
 import java.util.Random;
 
 public class Ball {
@@ -18,6 +17,8 @@ public class Ball {
 		Random random = new Random (System.currentTimeMillis());
 		velocidadeX = random.nextInt(5);
 		velocidadeY = random.nextInt(5);
+		x = 1;
+		y = 1;
 	}
 	public void update() {
         // A bolinha terá sempre a sua posição atualizada

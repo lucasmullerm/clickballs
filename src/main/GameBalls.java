@@ -12,6 +12,8 @@ public class GameBalls extends Game {
 	public GameBalls(float w, float h) {
 		super(w, h);
 		balls = new ArrayList<Ball>();
+		balls.add(new Ball(this));
+		balls.add(new Ball(this));
 	}
 
 	@Override
