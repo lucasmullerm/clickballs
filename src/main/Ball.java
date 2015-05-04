@@ -9,15 +9,16 @@ import java.util.Random;
 public class Ball {
 	private float velocidadeX, velocidadeY;
 	private float x, y;
-	private float largura, altura;
+	private static float largura, altura;
 	private boolean exists;
-	GraphicsContext gc;
-	public Ball (Game game, float x, float y) throws InterruptedException {
+	private static GraphicsContext gc;
+	public static void set (Game game) {
 		gc = game.getGraphicsContext();
 		largura = game.getW();
 		altura = game.getH();
+	}
+	public Ball (float x, float y) {
 		Random random = new Random (System.currentTimeMillis());
-		Thread.sleep(100);
 		velocidadeX = random.nextInt(5);
 		velocidadeY = random.nextInt(5);
 		this.x = x;
