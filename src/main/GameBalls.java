@@ -1,23 +1,32 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import engine.Game;
 
 public class GameBalls extends Game {
+	
+	List<Ball> balls;
 
 	public GameBalls(float w, float h) {
 		super(w, h);
-		// TODO Auto-generated constructor stub
+		balls = new ArrayList<Balls>();
 	}
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
+		for(Ball b : balls) {
+			ball.update();
+		}
 
 	}
 
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
+		for(Ball b : balls) {
+			ball.display();
+		}
 
 	}
 
