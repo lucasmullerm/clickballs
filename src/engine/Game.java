@@ -9,7 +9,7 @@ public abstract class Game {
 	
 	protected GraphicsContext gc;
 	private Canvas canvas;
-	private Scene scene;
+	protected Scene scene;
 
 	protected float MAX_W;
 	protected float MAX_H;
