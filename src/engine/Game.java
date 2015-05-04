@@ -17,6 +17,18 @@ public abstract class Game {
 		canvas = new Canvas(w, h);
 		gc = canvas.getGraphicsContext2D();
 	}
+	
+	public GraphicsContext getGraphicsContext() {
+		return gc;
+	}
+	
+	public float getW() {
+		return MAX_W;
+	}
+	
+	public float getH() {
+		return MAX_H;
+	}
 
 	public abstract void update();
 
