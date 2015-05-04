@@ -8,8 +8,8 @@ public abstract class Game {
 	protected GraphicsContext gc;
 	private Canvas canvas;
 
-	float MAX_W;
-	float MAX_H;
+	protected float MAX_W;
+	protected float MAX_H;
 	
 	public Game(float w, float h) {
 		MAX_W = w;

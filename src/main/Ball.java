@@ -3,6 +3,7 @@ package main;
 import engine.Game;
 import javafx.scene.canvas.*;
 import javafx.scene.paint.Color;
+
 import java.util.Random;
 
 public class Ball {
@@ -10,11 +11,12 @@ public class Ball {
 	private float x, y;
 	private float largura, altura;
 	GraphicsContext gc;
-	public Ball (Game game) {
+	public Ball (Game game) throws InterruptedException {
 		gc = game.getGraphicsContext();
 		largura = game.getW();
 		altura = game.getH();
 		Random random = new Random (System.currentTimeMillis());
+		Thread.sleep(100);
 		velocidadeX = random.nextInt(5);
 		velocidadeY = random.nextInt(5);
 		x = 1;
@@ -25,17 +27,14 @@ public class Ball {
         x += velocidadeX;
         y += velocidadeY;
         // Verificamos se a posição da bolinha está saindo da tela
-        if (x > largura || x < 0) {
+        if (x > largura-30 || x < 0) {
             velocidadeX *= -1;
         }
-        if (y > altura || y < 0) {
+        if (y > altura-30 || y < 0) {
             velocidadeY *= -1;
         }
     }
 	public void display() {
-        // primeiro desenhos o fundo com a cor cinza claro
-        gc.setFill(Color.LIGHTGRAY);
-        gc.fillRect(0, 0, largura, altura);
         // vamos fazer da cor vermelha
         gc.setFill(Color.RED);
         // enfim, desenhamos a bolinha com a posição atualizada e o tamanho de 10
