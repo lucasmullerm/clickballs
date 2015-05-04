@@ -11,13 +11,13 @@ public class GameBalls extends Game {
 
 	public GameBalls(float w, float h) {
 		super(w, h);
-		balls = new ArrayList<Balls>();
+		balls = new ArrayList<Ball>();
 	}
 
 	@Override
 	public void update() {
 		for(Ball b : balls) {
-			ball.update();
+			b.update();
 		}
 
 	}
@@ -25,7 +25,7 @@ public class GameBalls extends Game {
 	@Override
 	public void display() {
 		for(Ball b : balls) {
-			ball.display();
+			b.display();
 		}
 
 	}
