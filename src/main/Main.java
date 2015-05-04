@@ -3,8 +3,6 @@ package main;
 import engine.Game;
 import engine.GameEngine;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application{
@@ -15,7 +13,7 @@ public class Main extends Application{
 		int h = 400;
 		Game game = new GameBalls(w, h);
 		GameEngine engine = new GameEngine(60, game);
-		s.setScene(new Scene(new StackPane(game.getCanvas())));
+		s.setScene(game.getScene());
 		s.show();
 		
 		engine.start();
